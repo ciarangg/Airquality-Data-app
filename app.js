@@ -48,10 +48,6 @@ function manipulateLatestData(data) {
 
     }
 
-    console.log(completeArrayOfObjects)
-
-
-
     let arrayOfCitiesLatest = []
 
     for (i = 0; i < data.length; i++) {
@@ -72,7 +68,6 @@ function manipulateLatestData(data) {
 
 }    
 
-
 function manipulateMeasurementsData(data) {
 
 
@@ -89,8 +84,6 @@ function manipulateMeasurementsData(data) {
 
     }
 
-    console.log(completeArrayOfObjects)
-
     let arrayOfCitiesMeasurements = []
 
 
@@ -99,7 +92,6 @@ function manipulateMeasurementsData(data) {
         arrayOfCitiesMeasurements.push(data[i].city)
 
     }
-
 
     arrayOfCitiesMeasurements.sort()
 
@@ -127,10 +119,7 @@ function compoundDataCompilationAndMenu(data) {
         arrayOfCompoundIds.push(data[i].id)  
     }
     
-    console.log(arrayOfCompoundIds)
-
 }
-
 
 function cityDataCompilationAndMenu(latestArray, measurementsArray) {
 
@@ -181,8 +170,6 @@ function changeEventHandlerCompounds(event) {
 
     outsideSelectedCompound = selectedCompound
 
-    console.log(outsideSelectedCompound)
-
 }
 
 function changeEventHandlerCities(event) {
@@ -194,10 +181,6 @@ function changeEventHandlerCities(event) {
     selectedCity = selectedCity.pop()
 
     outsideSelectedCity = selectedCity
-
-    console.log(outsideSelectedCity)
-
-   //outsideSelectedCity = event.target.value
 
 }
 
@@ -227,23 +210,14 @@ function webSite() {
         for (i = 0; i < completeArrayOfObjects.length; i++) {
 
             if (outsideSelectedCity === completeArrayOfObjects[i].city && outsideSelectedCompound === completeArrayOfObjects[i].parameter) {
-                console.log(completeArrayOfObjects[i].value)
                 
                 sumOfValues += completeArrayOfObjects[i].value
                 amountOfValues++
 
-                console.log(arrayOfValues.push(completeArrayOfObjects[i].value))
             }
         }
 
-        console.log(sumOfValues)
-        console.log(amountOfValues)
-
         averageOfValues = sumOfValues/amountOfValues
-
-        console.log(averageOfValues)
-
-        console.log(arrayOfValues)
 
         littleBoxWithInfo.innerHTML = averageOfValues + 'µg/m³'
 
