@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Air Quality App</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body> 
+        <script src="./app.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"></script>
+        <header class="bar" class="boop">
+            <h1>Air Quality Around the World!</h1>
+            <a href="about.html">About</a>
+        </header>
+        <main>
+            <br />
+            <form>
+                <label for="cities"> Select a City: </label>
+                <select id="cities" name="cities">
+                    <option value="">Select option here</option>
+                </select>
+                <br />
+                <label for="compounds"> Select a Compound: </label>
+                <select id="compounds" name="compounds">
+                    <option value="">Select option here</option>
+                </select>
+                <input id="submitButton" type="submit" value="Let's Go!">
+            </form>
+            <p id="pa"></p>
+        </main>
+    </body>
+</html>
